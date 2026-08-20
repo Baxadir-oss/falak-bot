@@ -1,0 +1,27 @@
+[Unit]
+Description=Falak Weather Bot (aiogram + FastAPI)
+After=network.target
+
+[Service]
+Type=simple
+# MUHIM: quyidagi ikki yo'lni o'z serveringizga moslang.
+# Masalan, agar loyihani /home/falak/falak-bot ga clone qilgan bo'lsangiz,
+# WorkingDirectory shu bo'lishi kerak.
+WorkingDirectory=/home/falak/falak-bot
+ExecStart=/home/falak/falak-bot/.venv/bin/uvicorn app.main:app --host 127.0.0.1 --port 8080 --workers 1
+
+# Xato bo'lsa avtomatik qayta ishga tushadi (5 soniyadan keyin)
+Restart=on-failure
+RestartSec=5
+
+# 0.5GB RAM byudjetni oshib ketmaslik uchun xavfsizlik chegarasi.
+# Agar bot shu chegaradan oshsa, systemd uni o'ldirib qayta ishga tushiradi —
+# bu butun serverni "osilib qolishdan" asraydi.
+MemoryMax=350M
+
+# Xavfsizlik uchun tavsiya etiladigan qo'shimcha sozlamalar
+NoNewPrivileges=true
+PrivateTmp=true
+
+[Install]
+WantedBy=multi-user.target
