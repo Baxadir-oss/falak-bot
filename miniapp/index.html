@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Falak — Ob-havo</title>
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<style>
+  :root {
+    --bg: #eef3fb;
+    --fg: #14171f;
+    --hint: #6b7280;
+    --card: #ffffff;
+    --accent: #2f80ed;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--fg);
+    min-height: 100vh;
+    padding: 20px 16px 40px;
+    transition: background 0.4s ease;
+  }
+  .center-msg {
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    min-height: 70vh; text-align: center; gap: 12px; color: var(--hint);
+  }
+  .spinner {
+    width: 32px; height: 32px; border-radius: 50%;
+    border: 3px solid rgba(0,0,0,0.1); border-top-color: var(--accent);
+    animation: spin 0.8s linear infinite;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  .place { font-size: 15px; color: var(--hint); text-align: center; margin-bottom: 4px; }
+  .big-temp {
+    font-size: 76px; font-weight: 600; text-align: center; line-height: 1;
+    margin: 8px 0 4px;
+  }
+  .condition { text-align: center; font-size: 17px; color: var(--hint); margin-bottom: 20px; }
+  .feels { text-align: center; font-size: 13px; color: var(--hint); margin-top: -12px; margin-bottom: 20px; }
+
+  .card {
+    background: var(--card); border-radius: 18px; padding: 16px;
+    margin-bottom: 14px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+  }
+  .stats-grid {
+    display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px;
+  }
+  .stat { text-align: center; }
+  .stat-label { font-size: 12px; color: var(--hint); margin-bottom: 2px; }
+  .stat-value { font-size: 17px; font-weight: 600; }
+
+  .week-row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding: 8px 0; border-bottom: 1px solid rgba(0,0,0,0.06); font-size: 14px;
+  }
+  .week-row:last-child { border-bottom: none; }
+  .week-day { width: 60px; color: var(--hint); }
+  .week-emoji { width: 32px; text-align: center; font-size: 18px; }
+  .week-range { flex: 1; text-align: right; font-weight: 500; }
+
+  .wisdom {
+    font-style: italic; font-size: 14px; text-align: center; color: var(--hint);
+    padding: 4px 12px;
+  }
+</style>
+</head>
+<body>
+
+<div id="root">
+  <div class="center-msg">
+    <div class="spinner"></div>
+    <div id="status-text">Joylashuv aniqlanmoqda...</div>
+  </div>
+</div>
+
+<script>
+// ============================================================
+// SOZLAMA: bu yerga o'z VPS serveringizning HTTPS manzilini yozing
+// (.env dagi WEBHOOK_BASE_URL bilan bir xil bo'lishi kerak).
+// ============================================================
+const API_BASE = "https://domain.uz"; // <-- O'ZGARTIRING
+
+const tg = window.Telegram?.WebApp;
+if (tg) {
+  tg.ready();
+  tg.expand();
+  applyTheme();
+}
+
+function applyTheme() {
+  const p = tg.themeParams || {};
+  const root = document.documentElement.style;
+  if (p.bg_color) root.setProperty("--bg", p.bg_color);
+  if (p.text_color) root.setProperty("--fg", p.text_color);
+  if (p.hint_color) root.setProperty("--hint", p.hint_color);
+  if (p.secondary_bg_color) root.setProperty("--card", p.secondary_bg_color);
+  if (p.button_color) root.setProperty("--accent", p.button_color);
+}
+
+function setStatus(text) {
+  const el = document.getElementById("status-text");
+  if (el) el.textContent = text;
+}
+
+function gradientFor(code) {
+  if ([0, 1].includes(code)) return "linear-gradient(180deg,#8ec5fc,#e0c3fc)";
+  if ([2, 3, 45, 48].includes(code)) return "linear-gradient(180deg,#bdc3c7,#eef3fb)";
+  if ([95, 96, 99].includes(code)) return "linear-gradient(180deg,#485563,#29323c)";
+  if ([71, 73, 75, 77, 85, 86].includes(code)) return "linear-gradient(180deg,#e6eaf0,#ffffff)";
+  return "linear-gradient(180deg,#89f7fe,#66a6ff)"; // yomg'ir va boshqalar
+}
+
+const WEATHER_EMOJI = {
+  0: "☀️", 1: "🌤️", 2: "⛅", 3: "☁️", 45: "🌫️", 48: "🌫️❄️",
+  51: "🌦️", 53: "🌦️", 55: "🌧️", 56: "🌧️❄️", 57: "🌧️❄️",
+  61: "🌧️", 63: "🌧️", 65: "🌧️🌧️", 66: "🌧️❄️", 67: "⚠️🌧️❄️",
+  71: "🌨️", 73: "🌨️", 75: "❄️❄️", 77: "🌨️",
+  80: "🌦️", 81: "🌧️", 82: "⛈️",
+  85: "🌨️", 86: "🌨️❄️",
+  95: "⛈️", 96: "⛈️🧊", 99: "⚠️⛈️🧊",
+};
+
+function signed(v) {
+  const r = Math.round(v);
+  return (r >= 0 ? "+" : "") + r;
+}
+
+async function fetchWeather(lat, lon) {
+  const url = `${API_BASE}/api/weather?lat=${lat}&lon=${lon}`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error("API xatosi: " + res.status);
+  return res.json();
+}
+
+function render(data) {
+  const current = data.current || {};
+  const daily = data.daily || {};
+  const code = current.weather_code ?? 0;
+  const emoji = WEATHER_EMOJI[code] || "❓";
+
+  document.body.style.background = gradientFor(code);
+
+  const weekdays = ["Yak", "Dush", "Sesh", "Chor", "Pay", "Jum", "Shan"];
+  let weekHtml = "";
+  (daily.time || []).forEach((iso, i) => {
+    const d = new Date(iso);
+    const label = i === 0 ? "Bugun" : weekdays[d.getDay()];
+    const c = daily.weather_code?.[i] ?? 0;
+    const max = signed(daily.temperature_2m_max?.[i]);
+    const min = signed(daily.temperature_2m_min?.[i]);
+    weekHtml += `
+      <div class="week-row">
+        <div class="week-day">${label}</div>
+        <div class="week-emoji">${WEATHER_EMOJI[c] || "❓"}</div>
+        <div class="week-range">${max}° / ${min}°</div>
+      </div>`;
+  });
+
+  document.getElementById("root").innerHTML = `
+    <div class="big-temp">${signed(current.temperature_2m)}°</div>
+    <div class="condition">${emoji} </div>
+    <div class="feels">his qilinadi ${signed(current.apparent_temperature)}°</div>
+
+    <div class="card">
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-label">💦 Namlik</div>
+          <div class="stat-value">${Math.round(current.relative_humidity_2m ?? 0)}%</div>
+        </div>
+        <div class="stat">
+          <div class="stat-label">🌬 Shamol</div>
+          <div class="stat-value">${Math.round(current.wind_speed_10m ?? 0)} km/soat</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="card">
+      ${weekHtml}
+    </div>
+  `;
+}
+
+async function init() {
+  const useTelegramLocation = () => new Promise((resolve, reject) => {
+    if (tg?.LocationManager) {
+      tg.LocationManager.init(() => {
+        tg.LocationManager.getLocation((location) => {
+          if (location) resolve({ lat: location.latitude, lon: location.longitude });
+          else reject(new Error("Telegram joylashuvni bermadi"));
+        });
+      });
+    } else {
+      reject(new Error("LocationManager mavjud emas"));
+    }
+  });
+
+  const useBrowserLocation = () => new Promise((resolve, reject) => {
+    if (!navigator.geolocation) return reject(new Error("Geolocation qo'llab-quvvatlanmaydi"));
+    navigator.geolocation.getCurrentPosition(
+      (pos) => resolve({ lat: pos.coords.latitude, lon: pos.coords.longitude }),
+      (err) => reject(err),
+      { timeout: 8000 }
+    );
+  });
+
+  let coords;
+  try {
+    coords = await useTelegramLocation();
+  } catch (e) {
+    try {
+      coords = await useBrowserLocation();
+    } catch (e2) {
+      setStatus("Joylashuvga ruxsat berilmadi. Iltimos, botga qaytib joyni tanlang.");
+      return;
+    }
+  }
+
+  try {
+    setStatus("Ob-havo yuklanmoqda...");
+    const data = await fetchWeather(coords.lat, coords.lon);
+    render(data);
+  } catch (e) {
+    setStatus("Ob-havo xizmati bilan bog'lanib bo'lmadi. Birozdan so'ng qayta urinib ko'ring.");
+  }
+}
+
+init();
+</script>
+</body>
+</html>
