@@ -1,0 +1,113 @@
+{
+  "_note": "Bu matnlar loyiha uchun original yozilgan namuna to'plami (plan 7-bo'lim talabi: mualliflik huquqisiz, hech qanday saytdan ko'chirilmagan). Ishga tushirishdan oldin ona tilida so'zlashuvchilar tomonidan ko'rib chiqilishi va xohlasangiz kengaytirilishi tavsiya etiladi (plan 5.9-band).",
+  "clear": {
+    "uz": [
+      "Osmon musaffo bo'lsa, dil ham ravshan bo'ladi — bugun ishlaringiz silliq ketsin.",
+      "Quyosh baland ko'tarilgan kun — sayr uchun eng yaxshi kun, deydi keksalar.",
+      "Ochiq osmon — yaxshi niyat nishonasi, deb bilishadi bu yurtda."
+    ],
+    "ru": [
+      "Когда небо чистое, говорят: день начался с добрых намерений.",
+      "Ясный день — время для дел, что давно откладывались.",
+      "Небо без облаков — примета лёгкой дороги, так говорили в этих краях."
+    ],
+    "en": [
+      "A clear sky, the old saying goes, is nature's way of clearing your mind too.",
+      "On a bright day like this, even the smallest tasks feel lighter.",
+      "An open sky was once read as a sign of good fortune ahead."
+    ],
+    "kk": [
+      "Аспан ашық болса, көңіл де ашық болады дейді қариялар.",
+      "Күн шуақты болғанда, жол да жеңіл болады депті ата-бабалар.",
+      "Ашық аспан — жақсылықтың белгісі, деседі бұл өңірде."
+    ]
+  },
+  "cloudy": {
+    "uz": [
+      "Bulutlar sekin suzsa, ob-havo hali o'zgarmaydi, deydi dehqonlar.",
+      "Kulrang osmon ham o'tkinchi — sabr qilgan quyoshni ko'radi.",
+      "Bulutli kun — o'z ishingga tinch shug'ullanish uchun mos kun."
+    ],
+    "ru": [
+      "Медленные облака — знак того, что погода ещё постоит, говорят земледельцы.",
+      "Серое небо тоже проходит — терпеливый дождётся солнца.",
+      "Облачный день хорош для дел, что требуют тишины и сосредоточенности."
+    ],
+    "en": [
+      "Slow-moving clouds, farmers used to say, mean the weather will hold a while longer.",
+      "Even a grey sky passes — the patient always see the sun again.",
+      "A cloudy day is well spent on quiet, careful work."
+    ],
+    "kk": [
+      "Бұлт баяу жүзсе, ауа-райы әлі өзгермейді дейді диқандар.",
+      "Сұр аспан да өтеді — сабыр еткен күнді көреді.",
+      "Бұлтты күн — ішкі істерге, тыныш еңбекке жарасады."
+    ]
+  },
+  "rainy": {
+    "uz": [
+      "Yomg'ir yerni to'ydiradi — hosil ana shunday yetiladi, deydi dehqonlar.",
+      "Tomchilar tomgan kuni ishni to'xtatma, faqat soyabon ustiga qo'sh.",
+      "Yomg'irdan keyingi havo — eng toza havo, deydi bu yurtning odamlari."
+    ],
+    "ru": [
+      "Дождь напитывает землю — так рождается будущий урожай, говорят земледельцы.",
+      "В дождливый день дела не откладывают — просто берут зонт.",
+      "Воздух после дождя — самый чистый, так говорят в этих краях."
+    ],
+    "en": [
+      "Rain feeds the soil — this is how a good harvest begins, farmers say.",
+      "On a rainy day, don't pause your plans — just carry an umbrella.",
+      "The air after rain, they say here, is the cleanest of all."
+    ],
+    "kk": [
+      "Жаңбыр жерді суарады — егін осылай піседі дейді диқандар.",
+      "Жаңбырлы күні істі тоқтатпа, тек қолшатыр ал.",
+      "Жаңбырдан кейінгі ауа — ең таза ауа депті бұл жердің адамдары."
+    ]
+  },
+  "snowy": {
+    "uz": [
+      "Qor — yerning issiq ko'rpasi, deydi qishloq odamlari, u yerni sovuqdan asraydi.",
+      "Qorli kun — uy ichida issiq choy bilan o'tiradigan kun.",
+      "Ko'p qor yog'gan qish — bahorda serhosil yil, deb bilishgan ota-bobolarimiz."
+    ],
+    "ru": [
+      "Снег — тёплое одеяло земли, говорят в сёлах: он бережёт почву от мороза.",
+      "Снежный день лучше всего проводить дома, за горячим чаем.",
+      "Снежная зима — к урожайной весне, верили предки."
+    ],
+    "en": [
+      "Snow, they say in the villages, is the earth's warm blanket against the frost.",
+      "A snowy day is best spent indoors with something warm to drink.",
+      "A snowy winter, the old belief goes, promises a fruitful spring."
+    ],
+    "kk": [
+      "Қар — жердің жылы көрпесі депті ауыл адамдары, ол топырақты аяздан сақтайды.",
+      "Қарлы күнді үйде ыстық шай ішіп өткізген жөн.",
+      "Қар мол жауған қыс — берекелі көктемге апарады депті ата-бабалар."
+    ]
+  },
+  "stormy": {
+    "uz": [
+      "Momaqaldiroq — osmonning kuchini ko'rsatishi, deydi keksalar, undan qo'rqma, hurmat qil.",
+      "Chaqmoqdan keyin havo tozaradi — bu tabiiy tozalanish, deyishadi.",
+      "Kuchli shamol va momaqaldiroqda uyda qolgan afzal — bu oddiy ehtiyotkorlik."
+    ],
+    "ru": [
+      "Гроза — это сила неба, показывающая себя, говорят старики: её не боятся, а уважают.",
+      "После молнии воздух становится чище — так природа сама себя очищает.",
+      "В сильную грозу лучше остаться дома — это простая осторожность, а не страх."
+    ],
+    "en": [
+      "A thunderstorm, the elders say, is the sky showing its strength — met with respect, not fear.",
+      "After lightning, the air turns cleaner — nature's own way of resetting.",
+      "In a strong storm, staying indoors is simple wisdom, not worry."
+    ],
+    "kk": [
+      "Найзағай — аспанның күшін көрсетуі депті қариялар, одан қорықпай, құрметте.",
+      "Найзағайдан кейін ауа тазарады — бұл табиғаттың өзін-өзі тазартуы депті.",
+      "Күшті дауыл кезінде үйде қалған дұрыс — бұл қорқыныш емес, қарапайым сақтық."
+    ]
+  }
+}
