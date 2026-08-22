@@ -21,6 +21,9 @@ weather_cache: TTLCache = TTLCache(
     maxsize=_settings.cache_max_size, ttl=_settings.cache_ttl_seconds
 )
 geocoding_cache: TTLCache = TTLCache(maxsize=500, ttl=6 * 3600)
+# Havo sifati sekinroq o'zgaradi va tashqi xizmat qo'shimcha — TTL
+# bir oz uzunroq, keshning o'zi sekinlikni yashiradi.
+aqi_cache: TTLCache = TTLCache(maxsize=_settings.cache_max_size, ttl=3600)
 
 
 def grid_key(lat: float, lon: float) -> str:

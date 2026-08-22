@@ -34,9 +34,39 @@ def describe(wmo_code: int, lang: str) -> str:
     if entry is None:
         # Noma'lum kod kelsa ham bot yiqilmasligi kerak (3-bo'lim: "hech qachon
         # bo'sh ekran ko'rmaydi" tamoyili shu yerda ham amal qiladi).
-        return {"uz": "Noma'lum ob-havo holati", "ru": "Неизвестное состояние погоды",
-                "en": "Unknown weather condition", "kk": "Белгісіз ауа-райы жағдайы"}.get(lang, "—")
+        fallback = {
+            "uz": "Noma'lum ob-havo holati", "ru": "Неизвестное состояние погоды",
+            "en": "Unknown weather condition", "kk": "Белгісіз ауа-райы жағдайы",
+            "qq": "Belgisiz hawa rayı jaǵdayı",
+        }
+        return fallback.get(lang, "—")
     return entry.get(lang, entry["en"])
+
+
+# Haftalik jadval uchun qisqa (bir so'zli) holat nomlari — monospace
+# ustunlarga sig'ishi kerak, shuning uchun to'liq tavsifdan alohida.
+_SHORT_LABELS: dict[str, dict[str, str]] = {
+    "clear":  {"uz": "Quyosh",  "ru": "Солнце",  "en": "Sunny",  "kk": "Күн",      "qq": "Quyash"},
+    "cloudy": {"uz": "Bulut",   "ru": "Облачно", "en": "Cloudy", "kk": "Бұлт",     "qq": "Bult"},
+    "rainy":  {"uz": "Yomg'ir", "ru": "Дождь",   "en": "Rain",   "kk": "Жаңбыр",   "qq": "Jawın"},
+    "snowy":  {"uz": "Qor",     "ru": "Снег",    "en": "Snow",   "kk": "Қар",      "qq": "Qar"},
+    "stormy": {"uz": "Chaqmoq", "ru": "Гроза",   "en": "Storm",  "kk": "Найзағай", "qq": "Dawıl"},
+}
+
+
+def short_label(wmo_code: int, lang: str) -> str:
+    """Haftalik jadval uchun bitta so'zli qisqa holat nomi."""
+    if is_stormy(wmo_code):
+        cat = "stormy"
+    elif is_snowy(wmo_code):
+        cat = "snowy"
+    elif is_rainy(wmo_code):
+        cat = "rainy"
+    elif is_clear(wmo_code):
+        cat = "clear"
+    else:
+        cat = "cloudy"
+    return _SHORT_LABELS[cat].get(lang, _SHORT_LABELS[cat]["en"])
 
 
 def emoji(wmo_code: int) -> str:

@@ -21,7 +21,7 @@ from apscheduler.triggers.cron import CronTrigger
 
 from app.services.db import Database
 from app.services.formatting import format_daily_notification
-from app.services.weather_api import fetch_forecast
+from app.services.weather_api import fetch_weather_bundle
 
 logger = logging.getLogger("falak.scheduler")
 
@@ -47,12 +47,12 @@ async def _send_due_notifications(bot: Bot, db: Database) -> None:
 
     for user in users:
         try:
-            data = await fetch_forecast(user["lat"], user["lon"])
+            data, aqi = await fetch_weather_bundle(user["lat"], user["lon"])
             if data is None:
                 # API vaqtincha javob bermasa — bugun jim o'tkazamiz, ertaga
                 # qayta uriniladi. Eski/noto'g'ri ma'lumot yuborishdan yaxshi.
                 continue
-            text = format_daily_notification(data, user["place_name"], user["language"])
+            text = format_daily_notification(data, user["place_name"], user["language"], aqi=aqi)
             await bot.send_message(user["tg_id"], text)
             await db.mark_notified(user["tg_id"], today_str)
         except Exception:

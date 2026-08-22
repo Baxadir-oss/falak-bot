@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Any
 
 _LOCALES_DIR = Path(__file__).resolve().parent.parent / "locales"
-SUPPORTED_LANGUAGES = ("uz", "ru", "en", "kk")
+SUPPORTED_LANGUAGES = ("uz", "ru", "en", "kk", "qq")
 DEFAULT_LANGUAGE = "uz"
 # 5.8-bo'lim: agar Telegram tili 4 taga to'g'ri kelmasa — ruschaga o'tadi
 # (mintaqada eng keng tushuniladigan ikkinchi til sifatida).
