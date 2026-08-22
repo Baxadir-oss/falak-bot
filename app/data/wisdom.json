@@ -20,6 +20,11 @@
       "Аспан ашық болса, көңіл де ашық болады дейді қариялар.",
       "Күн шуақты болғанда, жол да жеңіл болады депті ата-бабалар.",
       "Ашық аспан — жақсылықтың белгісі, деседі бұл өңірде."
+    ],
+    "qq": [
+      "Aspan ashıq bolsa, kóńil de ashıq boladı dep aytadı qarttar.",
+      "Kún jarqın bolǵanda, jol da jeńil boladı dep aytqan ata-babalar.",
+      "Ashıq aspan — jaqsılıqtıń belgisi dep esaplaydı bul ólkede."
     ]
   },
   "cloudy": {
@@ -42,6 +47,11 @@
       "Бұлт баяу жүзсе, ауа-райы әлі өзгермейді дейді диқандар.",
       "Сұр аспан да өтеді — сабыр еткен күнді көреді.",
       "Бұлтты күн — ішкі істерге, тыныш еңбекке жарасады."
+    ],
+    "qq": [
+      "Bult aqırın júzse, hawa rayı áli ózgermeydi dep aytadı diyqanlar.",
+      "Bozarǵan aspan da ótedi — sabır etken kúndi kóredi.",
+      "Bultlı kún — tınısh miynetke, ishki islerge jarasadı."
     ]
   },
   "rainy": {
@@ -64,6 +74,11 @@
       "Жаңбыр жерді суарады — егін осылай піседі дейді диқандар.",
       "Жаңбырлы күні істі тоқтатпа, тек қолшатыр ал.",
       "Жаңбырдан кейінгі ауа — ең таза ауа депті бұл жердің адамдары."
+    ],
+    "qq": [
+      "Jawın jerdi suwǵaradı — egin usılay pisedi dep aytadı diyqanlar.",
+      "Jawınlı kúni isti toqtatpa, tek qolshatır al.",
+      "Jawınnan keyingi hawa — eń taza hawa dep aytadı bul jerdiń adamları."
     ]
   },
   "snowy": {
@@ -86,6 +101,11 @@
       "Қар — жердің жылы көрпесі депті ауыл адамдары, ол топырақты аяздан сақтайды.",
       "Қарлы күнді үйде ыстық шай ішіп өткізген жөн.",
       "Қар мол жауған қыс — берекелі көктемге апарады депті ата-бабалар."
+    ],
+    "qq": [
+      "Qar — jerdiń jılı kórpesi dep aytadı awıl adamları, ol topıraqtı ayazdan saqlaydı.",
+      "Qarlı kúndi úyde ıssı shay iship ótkeriw jón.",
+      "Qar mol jawǵan qıs — berekeli kókleme aparadı dep aytqan ata-babalar."
     ]
   },
   "stormy": {
@@ -108,6 +128,11 @@
       "Найзағай — аспанның күшін көрсетуі депті қариялар, одан қорықпай, құрметте.",
       "Найзағайдан кейін ауа тазарады — бұл табиғаттың өзін-өзі тазартуы депті.",
       "Күшті дауыл кезінде үйде қалған дұрыс — бұл қорқыныш емес, қарапайым сақтық."
+    ],
+    "qq": [
+      "Gúldirmama — aspannıń kúshin kórsetiwi dep aytadı qarttar, odan qorıqpay, húrmet et.",
+      "Gúldirmamadan keyin hawa tazaradı — bul tábiyattıń óz-ózin tazartıwı dep aytadı.",
+      "Kúshli dawıl waqtında úyde qalǵan durıs — bul qorqınısh emes, qarapayım saqlıq."
     ]
   }
 }

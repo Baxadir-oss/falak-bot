@@ -1,30 +1,226 @@
 {
-  "0":  {"uz": "Ochiq, quyoshli havo", "ru": "Ясно, солнечно", "en": "Clear, sunny", "kk": "Ашық, күн шуақты", "emoji": "☀️"},
-  "1":  {"uz": "Asosan ochiq havo", "ru": "Преимущественно ясно", "en": "Mostly clear", "kk": "Негізінен ашық", "emoji": "🌤️"},
-  "2":  {"uz": "Bulutli-quyoshli", "ru": "Переменная облачность", "en": "Partly cloudy", "kk": "Бұлтты-күнді аралас", "emoji": "⛅"},
-  "3":  {"uz": "Bulutli, osmon yopiq", "ru": "Пасмурно", "en": "Overcast", "kk": "Аспан толық бұлтты", "emoji": "☁️"},
-  "45": {"uz": "Tuman bosgan", "ru": "Туман", "en": "Foggy", "kk": "Тұман басқан", "emoji": "🌫️"},
-  "48": {"uz": "Muzlaydigan tuman", "ru": "Изморозевый туман", "en": "Freezing fog", "kk": "Аязды тұман", "emoji": "🌫️❄️"},
-  "51": {"uz": "Mayda shivalagan yomg'ir", "ru": "Слабая морось", "en": "Light drizzle", "kk": "Ұсақ себелеген жаңбыр", "emoji": "🌦️"},
-  "53": {"uz": "O'rtacha shivalagan yomg'ir", "ru": "Умеренная морось", "en": "Moderate drizzle", "kk": "Орташа себелеген жаңбыр", "emoji": "🌦️"},
-  "55": {"uz": "Kuchli shivalagan yomg'ir", "ru": "Сильная морось", "en": "Dense drizzle", "kk": "Қатты себелеген жаңбыр", "emoji": "🌧️"},
-  "56": {"uz": "Muzlab tushadigan mayda yomg'ir, yo'llar toyg'oq bo'lishi mumkin", "ru": "Слабая ледяная морось, дороги скользкие", "en": "Light freezing drizzle, icy roads possible", "kk": "Мұздататын ұсақ жаңбыр, жолдар тайғақ болуы мүмкін", "emoji": "🌧️❄️"},
-  "57": {"uz": "Kuchli muzlab tushadigan yomg'ir", "ru": "Сильная ледяная морось", "en": "Dense freezing drizzle", "kk": "Қатты мұздататын жаңбыр", "emoji": "🌧️❄️"},
-  "61": {"uz": "Yengil yomg'ir", "ru": "Небольшой дождь", "en": "Light rain", "kk": "Жеңіл жаңбыр", "emoji": "🌧️"},
-  "63": {"uz": "O'rtacha yomg'ir", "ru": "Умеренный дождь", "en": "Moderate rain", "kk": "Орташа жаңбыр", "emoji": "🌧️"},
-  "65": {"uz": "Kuchli yomg'ir", "ru": "Сильный дождь", "en": "Heavy rain", "kk": "Қатты жаңбыр", "emoji": "🌧️🌧️"},
-  "66": {"uz": "Yengil muzlab tushadigan yomg'ir", "ru": "Слабый ледяной дождь", "en": "Light freezing rain", "kk": "Жеңіл мұздататын жаңбыр", "emoji": "🌧️❄️"},
-  "67": {"uz": "Kuchli muzlab tushadigan yomg'ir — yo'llar xavfli", "ru": "Сильный ледяной дождь — дороги опасны", "en": "Heavy freezing rain — dangerous roads", "kk": "Қатты мұздататын жаңбыр — жолдар қауіпті", "emoji": "⚠️🌧️❄️"},
-  "71": {"uz": "Yengil qor", "ru": "Небольшой снег", "en": "Light snow", "kk": "Жеңіл қар", "emoji": "🌨️"},
-  "73": {"uz": "O'rtacha qor", "ru": "Умеренный снег", "en": "Moderate snow", "kk": "Орташа қар", "emoji": "🌨️"},
-  "75": {"uz": "Kuchli qor, bo'ron bo'lishi mumkin", "ru": "Сильный снег, возможна метель", "en": "Heavy snow, blizzard possible", "kk": "Қатты қар, боран болуы мүмкін", "emoji": "❄️❄️"},
-  "77": {"uz": "Mayda qor donachalari", "ru": "Снежная крупа", "en": "Snow grains", "kk": "Ұсақ қар түйіршіктері", "emoji": "🌨️"},
-  "80": {"uz": "Qisqa muddatli yengil jala", "ru": "Кратковременный слабый ливень", "en": "Light rain showers", "kk": "Қысқа мерзімді жеңіл нөсер", "emoji": "🌦️"},
-  "81": {"uz": "Qisqa muddatli o'rtacha jala", "ru": "Кратковременный умеренный ливень", "en": "Moderate rain showers", "kk": "Қысқа мерзімді орташа нөсер", "emoji": "🌧️"},
-  "82": {"uz": "To'satdan boshlanadigan kuchli jala", "ru": "Внезапный сильный ливень", "en": "Sudden, violent showers", "kk": "Кенеттен басталатын қатты нөсер", "emoji": "⛈️"},
-  "85": {"uz": "Qisqa muddatli yengil qor", "ru": "Кратковременный слабый снег", "en": "Light snow showers", "kk": "Қысқа мерзімді жеңіл қар", "emoji": "🌨️"},
-  "86": {"uz": "Qisqa muddatli kuchli qor", "ru": "Кратковременный сильный снег", "en": "Heavy snow showers", "kk": "Қысқа мерзімді қатты қар", "emoji": "🌨️❄️"},
-  "95": {"uz": "Momaqaldiroq, chaqmoq bilan", "ru": "Гроза, с молнией", "en": "Thunderstorm, with lightning", "kk": "Найзағай, найзағай жарқылымен", "emoji": "⛈️"},
-  "96": {"uz": "Momaqaldiroq va mayda do'l", "ru": "Гроза с небольшим градом", "en": "Thunderstorm with light hail", "kk": "Найзағай және ұсақ бұршақ", "emoji": "⛈️🧊"},
-  "99": {"uz": "Kuchli momaqaldiroq va yirik do'l — ehtiyot bo'ling", "ru": "Сильная гроза с крупным градом — будьте осторожны", "en": "Thunderstorm with heavy hail — take caution", "kk": "Қатты найзағай және ірі бұршақ — сақ болыңыз", "emoji": "⚠️⛈️🧊"}
+  "0": {
+    "uz": "Ochiq, quyoshli havo",
+    "ru": "Ясно, солнечно",
+    "en": "Clear, sunny",
+    "kk": "Ашық, күн шуақты",
+    "emoji": "☀️",
+    "qq": "Ashıq, quyashlı hawa"
+  },
+  "1": {
+    "uz": "Asosan ochiq havo",
+    "ru": "Преимущественно ясно",
+    "en": "Mostly clear",
+    "kk": "Негізінен ашық",
+    "emoji": "🌤️",
+    "qq": "Tiykarınan ashıq hawa"
+  },
+  "2": {
+    "uz": "Bulutli-quyoshli",
+    "ru": "Переменная облачность",
+    "en": "Partly cloudy",
+    "kk": "Бұлтты-күнді аралас",
+    "emoji": "⛅",
+    "qq": "Bultlı-quyashlı"
+  },
+  "3": {
+    "uz": "Bulutli, osmon yopiq",
+    "ru": "Пасмурно",
+    "en": "Overcast",
+    "kk": "Аспан толық бұлтты",
+    "emoji": "☁️",
+    "qq": "Bultlı, aspan jabıq"
+  },
+  "45": {
+    "uz": "Tuman bosgan",
+    "ru": "Туман",
+    "en": "Foggy",
+    "kk": "Тұман басқан",
+    "emoji": "🌫️",
+    "qq": "Tuman basqan"
+  },
+  "48": {
+    "uz": "Muzlaydigan tuman",
+    "ru": "Изморозевый туман",
+    "en": "Freezing fog",
+    "kk": "Аязды тұман",
+    "emoji": "🌫️❄️",
+    "qq": "Muzlaytuǵın tuman"
+  },
+  "51": {
+    "uz": "Mayda shivalagan yomg'ir",
+    "ru": "Слабая морось",
+    "en": "Light drizzle",
+    "kk": "Ұсақ себелеген жаңбыр",
+    "emoji": "🌦️",
+    "qq": "Mayda shıbıralaǵan jawın"
+  },
+  "53": {
+    "uz": "O'rtacha shivalagan yomg'ir",
+    "ru": "Умеренная морось",
+    "en": "Moderate drizzle",
+    "kk": "Орташа себелеген жаңбыр",
+    "emoji": "🌦️",
+    "qq": "Ortasha shıbıralaǵan jawın"
+  },
+  "55": {
+    "uz": "Kuchli shivalagan yomg'ir",
+    "ru": "Сильная морось",
+    "en": "Dense drizzle",
+    "kk": "Қатты себелеген жаңбыр",
+    "emoji": "🌧️",
+    "qq": "Kúshli shıbıralaǵan jawın"
+  },
+  "56": {
+    "uz": "Muzlab tushadigan mayda yomg'ir, yo'llar toyg'oq bo'lishi mumkin",
+    "ru": "Слабая ледяная морось, дороги скользкие",
+    "en": "Light freezing drizzle, icy roads possible",
+    "kk": "Мұздататын ұсақ жаңбыр, жолдар тайғақ болуы мүмкін",
+    "emoji": "🌧️❄️",
+    "qq": "Muzlap túsetuǵın mayda jawın, jollar taypaq bolıwı múmkin"
+  },
+  "57": {
+    "uz": "Kuchli muzlab tushadigan yomg'ir",
+    "ru": "Сильная ледяная морось",
+    "en": "Dense freezing drizzle",
+    "kk": "Қатты мұздататын жаңбыр",
+    "emoji": "🌧️❄️",
+    "qq": "Kúshli muzlap túsetuǵın jawın"
+  },
+  "61": {
+    "uz": "Yengil yomg'ir",
+    "ru": "Небольшой дождь",
+    "en": "Light rain",
+    "kk": "Жеңіл жаңбыр",
+    "emoji": "🌧️",
+    "qq": "Jeńil jawın"
+  },
+  "63": {
+    "uz": "O'rtacha yomg'ir",
+    "ru": "Умеренный дождь",
+    "en": "Moderate rain",
+    "kk": "Орташа жаңбыр",
+    "emoji": "🌧️",
+    "qq": "Ortasha jawın"
+  },
+  "65": {
+    "uz": "Kuchli yomg'ir",
+    "ru": "Сильный дождь",
+    "en": "Heavy rain",
+    "kk": "Қатты жаңбыр",
+    "emoji": "🌧️🌧️",
+    "qq": "Kúshli jawın"
+  },
+  "66": {
+    "uz": "Yengil muzlab tushadigan yomg'ir",
+    "ru": "Слабый ледяной дождь",
+    "en": "Light freezing rain",
+    "kk": "Жеңіл мұздататын жаңбыр",
+    "emoji": "🌧️❄️",
+    "qq": "Jeńil muzlap túsetuǵın jawın"
+  },
+  "67": {
+    "uz": "Kuchli muzlab tushadigan yomg'ir — yo'llar xavfli",
+    "ru": "Сильный ледяной дождь — дороги опасны",
+    "en": "Heavy freezing rain — dangerous roads",
+    "kk": "Қатты мұздататын жаңбыр — жолдар қауіпті",
+    "emoji": "⚠️🌧️❄️",
+    "qq": "Kúshli muzlap túsetuǵın jawın — jollar qawipli"
+  },
+  "71": {
+    "uz": "Yengil qor",
+    "ru": "Небольшой снег",
+    "en": "Light snow",
+    "kk": "Жеңіл қар",
+    "emoji": "🌨️",
+    "qq": "Jeńil qar"
+  },
+  "73": {
+    "uz": "O'rtacha qor",
+    "ru": "Умеренный снег",
+    "en": "Moderate snow",
+    "kk": "Орташа қар",
+    "emoji": "🌨️",
+    "qq": "Ortasha qar"
+  },
+  "75": {
+    "uz": "Kuchli qor, bo'ron bo'lishi mumkin",
+    "ru": "Сильный снег, возможна метель",
+    "en": "Heavy snow, blizzard possible",
+    "kk": "Қатты қар, боран болуы мүмкін",
+    "emoji": "❄️❄️",
+    "qq": "Kúshli qar, boran bolıwı múmkin"
+  },
+  "77": {
+    "uz": "Mayda qor donachalari",
+    "ru": "Снежная крупа",
+    "en": "Snow grains",
+    "kk": "Ұсақ қар түйіршіктері",
+    "emoji": "🌨️",
+    "qq": "Mayda qar dánesheleri"
+  },
+  "80": {
+    "uz": "Qisqa muddatli yengil jala",
+    "ru": "Кратковременный слабый ливень",
+    "en": "Light rain showers",
+    "kk": "Қысқа мерзімді жеңіл нөсер",
+    "emoji": "🌦️",
+    "qq": "Qısqa waqıtlı jeńil nósher"
+  },
+  "81": {
+    "uz": "Qisqa muddatli o'rtacha jala",
+    "ru": "Кратковременный умеренный ливень",
+    "en": "Moderate rain showers",
+    "kk": "Қысқа мерзімді орташа нөсер",
+    "emoji": "🌧️",
+    "qq": "Qısqa waqıtlı ortasha nósher"
+  },
+  "82": {
+    "uz": "To'satdan boshlanadigan kuchli jala",
+    "ru": "Внезапный сильный ливень",
+    "en": "Sudden, violent showers",
+    "kk": "Кенеттен басталатын қатты нөсер",
+    "emoji": "⛈️",
+    "qq": "Kútilmegen kúshli nósher"
+  },
+  "85": {
+    "uz": "Qisqa muddatli yengil qor",
+    "ru": "Кратковременный слабый снег",
+    "en": "Light snow showers",
+    "kk": "Қысқа мерзімді жеңіл қар",
+    "emoji": "🌨️",
+    "qq": "Qısqa waqıtlı jeńil qar"
+  },
+  "86": {
+    "uz": "Qisqa muddatli kuchli qor",
+    "ru": "Кратковременный сильный снег",
+    "en": "Heavy snow showers",
+    "kk": "Қысқа мерзімді қатты қар",
+    "emoji": "🌨️❄️",
+    "qq": "Qısqa waqıtlı kúshli qar"
+  },
+  "95": {
+    "uz": "Momaqaldiroq, chaqmoq bilan",
+    "ru": "Гроза, с молнией",
+    "en": "Thunderstorm, with lightning",
+    "kk": "Найзағай, найзағай жарқылымен",
+    "emoji": "⛈️",
+    "qq": "Gúldirmama, jasın menen"
+  },
+  "96": {
+    "uz": "Momaqaldiroq va mayda do'l",
+    "ru": "Гроза с небольшим градом",
+    "en": "Thunderstorm with light hail",
+    "kk": "Найзағай және ұсақ бұршақ",
+    "emoji": "⛈️🧊",
+    "qq": "Gúldirmama hám mayda múrshaq"
+  },
+  "99": {
+    "uz": "Kuchli momaqaldiroq va yirik do'l — ehtiyot bo'ling",
+    "ru": "Сильная гроза с крупным градом — будьте осторожны",
+    "en": "Thunderstorm with heavy hail — take caution",
+    "kk": "Қатты найзағай және ірі бұршақ — сақ болыңыз",
+    "emoji": "⚠️⛈️🧊",
+    "qq": "Kúshli gúldirmama hám iri múrshaq — saq bolıń"
+  }
 }
