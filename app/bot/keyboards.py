@@ -12,6 +12,7 @@ def language_keyboard() -> InlineKeyboardMarkup:
     builder.button(text="Русский", callback_data="lang:ru")
     builder.button(text="English", callback_data="lang:en")
     builder.button(text="Қазақша", callback_data="lang:kk")
+    builder.button(text="Qaraqalpaqsha", callback_data="lang:qq")
     builder.adjust(2)
     return builder.as_markup()
 
