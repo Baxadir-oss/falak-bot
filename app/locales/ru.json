@@ -22,13 +22,12 @@
   "today_header": "{emoji} *{place}* — {date}",
   "today_temp_line": "🌡 Сейчас: {temp}° (ощущается как {feels}°)",
   "today_condition_line": "{emoji} {condition}",
-  "today_precip_line": "💧 Вероятность осадков: {prob}%",
-  "today_wind_line": "🌬 Ветер: {speed} км/ч",
+  "today_precip_line": "💧 Осадки: {prob}% ({amount} мм)",
+  "today_wind_line": "🌬 Ветер: {speed} км/ч, {direction}",
   "today_humidity_line": "💦 Влажность: {humidity}%",
   "today_uv_line": "🧴 УФ-индекс: {uv}",
   "today_sun_line": "🌅 {sunrise} — 🌇 {sunset}",
   "week_header": "📅 *{place}* — прогноз на {days}",
-  "week_day_line": "{day_label}: {emoji} {max}° / {min}°, 💧{prob}%",
   "advice_umbrella": "☂️ Не забудьте зонт.",
   "advice_uv": "🧴 УФ-индекс высокий — берегитесь солнца.",
   "advice_wind": "💨 Сильный ветер — будьте осторожны.",
@@ -45,11 +44,63 @@
   "notify_enabled": "🔔 Ежедневное уведомление включено на {time}:00.",
   "notify_disabled": "🔕 Ежедневное уведомление выключено.",
   "error_generic": "😕 Что-то пошло не так. Попробуйте немного позже.",
-  "error_api_down_cached": "📡 Не удалось связаться со службой погоды. Последние сохранённые данные:\n\n{cached}\n\n_(обновляется...)_",
   "error_api_down_no_cache": "📡 Не удалось связаться со службой погоды. Попробуйте немного позже.",
   "plurals": {
-    "days": {"one": "{n} день", "few": "{n} дня", "many": "{n} дней"}
+    "days": {
+      "one": "{n} день",
+      "few": "{n} дня",
+      "many": "{n} дней"
+    }
   },
   "today_label": "Сегодня",
-  "weekdays_short": ["Пн", "Вт", "Ср", "Чт", "Пт", "Сб", "Вс"]
+  "weekdays_short": [
+    "Пн",
+    "Вт",
+    "Ср",
+    "Чт",
+    "Пт",
+    "Сб",
+    "Вс"
+  ],
+  "lang_qq": "Qaraqalpaqsha",
+  "today_gust_line": "💨 Порывы: до {gust} км/ч",
+  "today_pressure_line": "🎈 Давление: {pressure} гПа",
+  "today_cloud_line": "☁️ Облачность: {cloud}%",
+  "today_aqi_line": "🍃 Качество воздуха: {label} (AQI {value})",
+  "today_moon_line": "{emoji} Фаза луны: {label}",
+  "today_section_atmosphere": "Атмосфера",
+  "today_section_sky": "Небо",
+  "week_col_day": "День",
+  "week_col_condition": "Погода",
+  "week_col_temp": "Макс/Мин",
+  "week_col_rain": "Дождь",
+  "week_col_wind": "Ветер",
+  "advice_aqi": "🍃 Качество воздуха низкое — ограничьте долгие прогулки на улице.",
+  "compass": {
+    "N": "северный",
+    "NE": "северо-восточный",
+    "E": "восточный",
+    "SE": "юго-восточный",
+    "S": "южный",
+    "SW": "юго-западный",
+    "W": "западный",
+    "NW": "северо-западный"
+  },
+  "aqi_labels": {
+    "good": "Хорошее",
+    "fair": "Приемлемое",
+    "moderate": "Среднее",
+    "poor": "Плохое",
+    "very_poor": "Очень плохое"
+  },
+  "moon_phases": {
+    "new_moon": "Новолуние",
+    "waxing_crescent": "Растущий серп",
+    "first_quarter": "Первая четверть",
+    "waxing_gibbous": "Растущая Луна",
+    "full_moon": "Полнолуние",
+    "waning_gibbous": "Убывающая Луна",
+    "last_quarter": "Последняя четверть",
+    "waning_crescent": "Убывающий серп"
+  }
 }

@@ -22,13 +22,12 @@
   "today_header": "{emoji} *{place}* — {date}",
   "today_temp_line": "🌡 Hozir: {temp}° (his qilinadi {feels}°)",
   "today_condition_line": "{emoji} {condition}",
-  "today_precip_line": "💧 Yog'ingarchilik ehtimoli: {prob}%",
-  "today_wind_line": "🌬 Shamol: {speed} km/soat",
+  "today_precip_line": "💧 Yog'ingarchilik: {prob}% ({amount} mm)",
+  "today_wind_line": "🌬 Shamol: {speed} km/soat, {direction}",
   "today_humidity_line": "💦 Namlik: {humidity}%",
   "today_uv_line": "🧴 UV indeksi: {uv}",
   "today_sun_line": "🌅 {sunrise} — 🌇 {sunset}",
   "week_header": "📅 *{place}* — {days} prognoz",
-  "week_day_line": "{day_label}: {emoji} {max}° / {min}°, 💧{prob}%",
   "advice_umbrella": "☂️ Soyabon olishni unutmang.",
   "advice_uv": "🧴 UV indeksi yuqori — quyoshdan himoyalaning.",
   "advice_wind": "💨 Shamol kuchli — ehtiyot bo'ling.",
@@ -45,11 +44,61 @@
   "notify_enabled": "🔔 Kunlik xabar soat {time}:00 ga yoqildi.",
   "notify_disabled": "🔕 Kunlik xabar o'chirildi.",
   "error_generic": "😕 Nimadir xato ketdi. Birozdan so'ng qayta urinib ko'ring.",
-  "error_api_down_cached": "📡 Ob-havo xizmati bilan hozircha bog'lanib bo'lmadi. Oxirgi saqlangan ma'lumot:\n\n{cached}\n\n_(yangilanmoqda...)_",
   "error_api_down_no_cache": "📡 Ob-havo xizmati bilan bog'lanib bo'lmadi. Birozdan so'ng qayta urinib ko'ring.",
   "plurals": {
-    "days": {"other": "{n} kunlik"}
+    "days": {
+      "other": "{n} kunlik"
+    }
   },
   "today_label": "Bugun",
-  "weekdays_short": ["Dush", "Sesh", "Chor", "Pay", "Jum", "Shan", "Yak"]
+  "weekdays_short": [
+    "Dush",
+    "Sesh",
+    "Chor",
+    "Pay",
+    "Jum",
+    "Shan",
+    "Yak"
+  ],
+  "lang_qq": "Qaraqalpaqsha",
+  "today_gust_line": "💨 Zarbalar: {gust} km/soat gacha",
+  "today_pressure_line": "🎈 Bosim: {pressure} hPa",
+  "today_cloud_line": "☁️ Bulutlilik: {cloud}%",
+  "today_aqi_line": "🍃 Havo sifati: {label} (AQI {value})",
+  "today_moon_line": "{emoji} Oy fazasi: {label}",
+  "today_section_atmosphere": "Atmosfera",
+  "today_section_sky": "Osmon",
+  "week_col_day": "Kun",
+  "week_col_condition": "Holat",
+  "week_col_temp": "Max/Min",
+  "week_col_rain": "Yomg'ir",
+  "week_col_wind": "Shamol",
+  "advice_aqi": "🍃 Havo sifati past — tashqarida uzoq yurishni cheklang.",
+  "compass": {
+    "N": "Shimoldan",
+    "NE": "Shimoli-sharqdan",
+    "E": "Sharqdan",
+    "SE": "Janubi-sharqdan",
+    "S": "Janubdan",
+    "SW": "Janubi-g'arbdan",
+    "W": "G'arbdan",
+    "NW": "Shimoli-g'arbdan"
+  },
+  "aqi_labels": {
+    "good": "Yaxshi",
+    "fair": "Qoniqarli",
+    "moderate": "O'rtacha",
+    "poor": "Yomon",
+    "very_poor": "Juda yomon"
+  },
+  "moon_phases": {
+    "new_moon": "Yangi oy",
+    "waxing_crescent": "O'suvchi hilol",
+    "first_quarter": "Birinchi chorak",
+    "waxing_gibbous": "O'suvchi to'lin oy",
+    "full_moon": "To'lin oy",
+    "waning_gibbous": "Kamayuvchi to'lin oy",
+    "last_quarter": "Oxirgi chorak",
+    "waning_crescent": "Kamayuvchi hilol"
+  }
 }

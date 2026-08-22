@@ -22,13 +22,12 @@
   "today_header": "{emoji} *{place}* — {date}",
   "today_temp_line": "🌡 Қазір: {temp}° (сезілуі {feels}°)",
   "today_condition_line": "{emoji} {condition}",
-  "today_precip_line": "💧 Жауын-шашын ықтималдығы: {prob}%",
-  "today_wind_line": "🌬 Жел: {speed} км/сағ",
+  "today_precip_line": "💧 Жауын-шашын: {prob}% ({amount} мм)",
+  "today_wind_line": "🌬 Жел: {speed} км/сағ, {direction}",
   "today_humidity_line": "💦 Ылғалдылық: {humidity}%",
   "today_uv_line": "🧴 УК индексі: {uv}",
   "today_sun_line": "🌅 {sunrise} — 🌇 {sunset}",
   "week_header": "📅 *{place}* — {days} болжам",
-  "week_day_line": "{day_label}: {emoji} {max}° / {min}°, 💧{prob}%",
   "advice_umbrella": "☂️ Қолшатырды ұмытпаңыз.",
   "advice_uv": "🧴 УК индексі жоғары — күннен қорғаныңыз.",
   "advice_wind": "💨 Жел күшті — сақ болыңыз.",
@@ -45,11 +44,61 @@
   "notify_enabled": "🔔 Күнделікті хабарлама сағат {time}:00-ге қосылды.",
   "notify_disabled": "🔕 Күнделікті хабарлама өшірілді.",
   "error_generic": "😕 Бірдеңе қате кетті. Сәлден соң қайта көріңіз.",
-  "error_api_down_cached": "📡 Ауа-райы қызметімен байланысу мүмкін болмады. Соңғы сақталған дерек:\n\n{cached}\n\n_(жаңартылуда...)_",
   "error_api_down_no_cache": "📡 Ауа-райы қызметімен байланысу мүмкін болмады. Сәлден соң қайта көріңіз.",
   "plurals": {
-    "days": {"other": "{n} күндік"}
+    "days": {
+      "other": "{n} күндік"
+    }
   },
   "today_label": "Бүгін",
-  "weekdays_short": ["Дс", "Сс", "Ср", "Бс", "Жм", "Сб", "Жс"]
+  "weekdays_short": [
+    "Дс",
+    "Сс",
+    "Ср",
+    "Бс",
+    "Жм",
+    "Сб",
+    "Жс"
+  ],
+  "lang_qq": "Qaraqalpaqsha",
+  "today_gust_line": "💨 Жел екпіні: {gust} км/сағ дейін",
+  "today_pressure_line": "🎈 Қысым: {pressure} гПа",
+  "today_cloud_line": "☁️ Бұлттылық: {cloud}%",
+  "today_aqi_line": "🍃 Ауа сапасы: {label} (AQI {value})",
+  "today_moon_line": "{emoji} Ай фазасы: {label}",
+  "today_section_atmosphere": "Атмосфера",
+  "today_section_sky": "Аспан",
+  "week_col_day": "Күн",
+  "week_col_condition": "Күй",
+  "week_col_temp": "Макс/Мин",
+  "week_col_rain": "Жаңбыр",
+  "week_col_wind": "Жел",
+  "advice_aqi": "🍃 Ауа сапасы төмен — сыртта ұзақ жүруді шектеңіз.",
+  "compass": {
+    "N": "солтүстіктен",
+    "NE": "солтүстік-шығыстан",
+    "E": "шығыстан",
+    "SE": "оңтүстік-шығыстан",
+    "S": "оңтүстіктен",
+    "SW": "оңтүстік-батыстан",
+    "W": "батыстан",
+    "NW": "солтүстік-батыстан"
+  },
+  "aqi_labels": {
+    "good": "Жақсы",
+    "fair": "Қанағаттанарлық",
+    "moderate": "Орташа",
+    "poor": "Нашар",
+    "very_poor": "Өте нашар"
+  },
+  "moon_phases": {
+    "new_moon": "Жаңа ай",
+    "waxing_crescent": "Өсіп келе жатқан орақ ай",
+    "first_quarter": "Бірінші ширек",
+    "waxing_gibbous": "Өсіп келе жатқан ай",
+    "full_moon": "Толған ай",
+    "waning_gibbous": "Кему кезеңіндегі ай",
+    "last_quarter": "Соңғы ширек",
+    "waning_crescent": "Кему кезеңіндегі орақ ай"
+  }
 }

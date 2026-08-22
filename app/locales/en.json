@@ -22,13 +22,12 @@
   "today_header": "{emoji} *{place}* — {date}",
   "today_temp_line": "🌡 Now: {temp}° (feels like {feels}°)",
   "today_condition_line": "{emoji} {condition}",
-  "today_precip_line": "💧 Chance of precipitation: {prob}%",
-  "today_wind_line": "🌬 Wind: {speed} km/h",
+  "today_precip_line": "💧 Precipitation: {prob}% ({amount} mm)",
+  "today_wind_line": "🌬 Wind: {speed} km/h, {direction}",
   "today_humidity_line": "💦 Humidity: {humidity}%",
   "today_uv_line": "🧴 UV index: {uv}",
   "today_sun_line": "🌅 {sunrise} — 🌇 {sunset}",
   "week_header": "📅 *{place}* — {days} forecast",
-  "week_day_line": "{day_label}: {emoji} {max}° / {min}°, 💧{prob}%",
   "advice_umbrella": "☂️ Don't forget your umbrella.",
   "advice_uv": "🧴 UV index is high — protect yourself from the sun.",
   "advice_wind": "💨 Strong wind — take care.",
@@ -45,11 +44,62 @@
   "notify_enabled": "🔔 Daily notification set to {time}:00.",
   "notify_disabled": "🔕 Daily notification turned off.",
   "error_generic": "😕 Something went wrong. Please try again shortly.",
-  "error_api_down_cached": "📡 Couldn't reach the weather service. Last saved data:\n\n{cached}\n\n_(updating...)_",
   "error_api_down_no_cache": "📡 Couldn't reach the weather service. Please try again shortly.",
   "plurals": {
-    "days": {"one": "{n}-day", "other": "{n}-day"}
+    "days": {
+      "one": "{n}-day",
+      "other": "{n}-day"
+    }
   },
   "today_label": "Today",
-  "weekdays_short": ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"]
+  "weekdays_short": [
+    "Mon",
+    "Tue",
+    "Wed",
+    "Thu",
+    "Fri",
+    "Sat",
+    "Sun"
+  ],
+  "lang_qq": "Qaraqalpaqsha",
+  "today_gust_line": "💨 Gusts: up to {gust} km/h",
+  "today_pressure_line": "🎈 Pressure: {pressure} hPa",
+  "today_cloud_line": "☁️ Cloud cover: {cloud}%",
+  "today_aqi_line": "🍃 Air quality: {label} (AQI {value})",
+  "today_moon_line": "{emoji} Moon phase: {label}",
+  "today_section_atmosphere": "Atmosphere",
+  "today_section_sky": "Sky",
+  "week_col_day": "Day",
+  "week_col_condition": "Cond",
+  "week_col_temp": "Max/Min",
+  "week_col_rain": "Rain",
+  "week_col_wind": "Wind",
+  "advice_aqi": "🍃 Air quality is low — limit time spent outdoors.",
+  "compass": {
+    "N": "from the North",
+    "NE": "from the Northeast",
+    "E": "from the East",
+    "SE": "from the Southeast",
+    "S": "from the South",
+    "SW": "from the Southwest",
+    "W": "from the West",
+    "NW": "from the Northwest"
+  },
+  "aqi_labels": {
+    "good": "Good",
+    "fair": "Fair",
+    "moderate": "Moderate",
+    "poor": "Poor",
+    "very_poor": "Very poor"
+  },
+  "moon_phases": {
+    "new_moon": "New Moon",
+    "waxing_crescent": "Waxing Crescent",
+    "first_quarter": "First Quarter",
+    "waxing_gibbous": "Waxing Gibbous",
+    "full_moon": "Full Moon",
+    "waning_gibbous": "Waning Gibbous",
+    "last_quarter": "Last Quarter",
+    "waning_crescent": "Waning Crescent"
+  }
 }
